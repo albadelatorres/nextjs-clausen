@@ -61,7 +61,7 @@ export default function RootLayout({
 
             <NavbarContent justify="end">
               <NavbarItem>
-                <Button as={Link} href="/kontakt" variant="flat">
+                <Button as={Link} href="/" variant="flat">
                   Kontakt
                 </Button>
               </NavbarItem>

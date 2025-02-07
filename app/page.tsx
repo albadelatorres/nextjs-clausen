@@ -112,7 +112,7 @@ export default function Home() {
         <title>Fugemester Clausen | Professionel fugning</title>
         <meta
           name="description"
-          content="Fugemester Clausen tilbyder professionel fugearbejde med over XX års erfaring. Få et uforpligtende tilbud i dag."
+          content="Fugemester Clausen tilbyder professionel fugearbejde. Få et uforpligtende tilbud i dag."
         />
       </Head>
       <main>
@@ -139,7 +139,7 @@ export default function Home() {
               <div className="card">
                 <h2>Om os</h2>
                 <p>
-                  Med over XX års erfaring leverer vi kvalitetsfugning til både nybyggeri og renovering. Vores styrker er præcision, pålidelighed og en jordnær tilgang – det er derfor, vores kunder vælger os.
+                  Vi leverer kvalitetsfugning til både nybyggeri og renovering. Vores styrker er præcision, pålidelighed og en jordnær tilgang – det er derfor, vores kunder vælger os.
                 </p>
                 <Link href="/hvem-er-vi" className="btn btn-secondary">
                   Læs mere
@@ -163,7 +163,7 @@ export default function Home() {
                 <p>
                   Udforsk vores galleri og se eksempler på vores præcise og kvalitetsbevidste fugearbejde.
                 </p>
-                <Link href="/galleri" className="btn btn-secondary">
+                <Link href="/billedgalleri" className="btn btn-secondary">
                   Læs mere
                 </Link>
               </div>

@@ -137,7 +137,7 @@ export default function Home() {
             <div className="cards-wrapper">
               {/* Tarjeta Om os */}
               <div className="card">
-                <h2>Om os</h2>
+                <h2>Hvem er vi</h2>
                 <p>
                   Vi leverer kvalitetsfugning til både nybyggeri og renovering. Vores styrker er præcision, pålidelighed og en jordnær tilgang – det er derfor, vores kunder vælger os.
                 </p>
@@ -148,9 +148,9 @@ export default function Home() {
 
               {/* Tarjeta Vores ydelser */}
               <div className="card">
-                <h2>Vores ydelser</h2>
+                <h2>Hvad laver vi</h2>
                 <p>
-                  Vi tilbyder et bredt udvalg af fugearbejde – fra vinduer og døre til badeværelser, industriløsninger og specialprojekter.
+                  Vi tilbyder et bredt udvalg af fugearbejde – fra vinduer og døre til badeværelser og specialprojekter.
                 </p>
                 <Link href="/hvad-laver-vi" className="btn btn-secondary">
                   Læs mere

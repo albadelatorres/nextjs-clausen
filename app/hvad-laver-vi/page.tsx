@@ -1,111 +1,99 @@
-"use client";
+"use client"
+import { Card } from "@/components/ui/card";
+import InteractiveColorWheel from "../../components/ui/InteractiveColorWheel";
+import { motion } from "framer-motion";
+import { useEffect } from "react";
 
-import Head from "next/head";
+const services = [
+    "Døre",
+    "Vinduer",
+    "Badeværelser",
+    "Klinker",
+    "Køkken",
+    "Sandbestrøede fuger",
+    "Dilationfuger",
+    "Udskiftninger af gummi fuger",
+];
 
 export default function HvadLaverVi() {
-  return (
-    <>
-      <Head>
-        <title>Hvad laver vi? - Fugemester Clausen</title>
-        <meta 
-          name="description" 
-          content="Vi tilbyder elastisk fugearbejde med kvalitetsmaterialer til forskellige områder som døre, badeværelser, gulv/loft og mere." 
-        />
-      </Head>
-      
-      <main className="services-container">
-        <h1>Hvad laver vi?</h1>
+    useEffect(() => {
+        // Smooth scroll behavior
+        document.documentElement.style.scrollBehavior = "smooth";
+        return () => {
+            document.documentElement.style.scrollBehavior = "auto";
+        };
+    }, []);
 
-        <p className="intro-text">
-          Når man skal fuge, er det vigtigt at produktet har de rette egenskaber. 
-          Hvor godt fugemassen tåler temperaturvariationer, UV-lys samt påvirkninger fra vand og kemikalier 
-          vil variere med produktets sammensætning og hvilken teknologi den er baseret på.
-        </p>
+    return (
+        <div className="min-h-screen bg-gradient-to-b from-sage-50 to-sage-100">
+            <div className="container max-w-4xl mx-auto px-4 py-12 sm:py-20">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="space-y-8"
+                >
+                    <div className="text-center space-y-4">
+                        <span className="inline-block px-4 py-1 rounded-full bg-sage-100 text-sage-700 text-sm font-medium animate-fade-in">
+                            Professionelt Fugearbejde
+                        </span>
+                        <h1 className="text-4xl sm:text-5xl font-bold text-sage-900 tracking-tight">
+                            Hvad laver vi?
+                        </h1>
+                    </div>
 
-        <p className="highlight-text">
-          Hos <strong>Fugemester Clausen</strong> benytter vi derfor kun kvalitetsmaterialer og tilbyder elastisk 
-          fugearbejde indenfor følgende kategorier, både ved nybyggeri og renoveringsarbejder:
-        </p>
+                    <div className="glass-panel rounded-2xl p-6 sm:p-8 space-y-6 animate-fade-in">
+                        <p className="text-lg text-sage-800 leading-relaxed">
+                            Når man skal fuge, er det vigtigt at produktet har de rette egenskaber.
+                            Hvor godt fugemassen tåler temperaturvariationer, UV-lys samt
+                            påvirkninger fra vand og kemikalier vil variere med produktets
+                            sammensætning og hvilken teknologi den er baseret på.
+                        </p>
 
-        <ul className="services-list">
-          <li>Døre/Vinduer</li>
-          <li>Badeværelser</li>
-          <li>Gulv/loft</li>
-          <li>Omfugning</li>
-          <li>Finish fugning</li>
-        </ul>
+                        <div className="border-l-4 border-sage-500 pl-6 py-2">
+                            <p className="text-lg text-sage-700">
+                                Hos <span className="font-semibold">Fugemester Clausen</span> benytter
+                                vi derfor kun kvalitetsmaterialer og tilbyder elastisk fugearbejde
+                                indenfor følgende kategorier, både ved nybyggeri og
+                                renoveringsarbejder:
+                            </p>
+                        </div>
+                    </div>
 
-        <p className="info-text">
-          Fugemateriale kommer i mange farver, så kontakt os, og vi finder sammen den der passer bedst til dit projekt.
-        </p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 py-8">
+                        {services.map((service, index) => (
+                            <motion.div
+                                key={service}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                            >
+                                <Card className="hover-card p-6 bg-white/80 backdrop-blur border border-sage-200">
+                                    <h3 className="text-lg font-medium text-sage-800">{service}</h3>
+                                </Card>
+                            </motion.div>
+                        ))}
+                    </div>
 
-        <p className="cta-text">
-          Fandt du ikke hvad du ledte efter? Kontakt os alligevel, så tager vi en snak om, hvordan vi kan hjælpe dig.
-        </p>
-      </main>
+                    <div className="glass-panel rounded-2xl p-8 text-center space-y-6">
+                        <p className="text-lg text-sage-700">
+                            Fugemateriale kommer i mange farver, så kontakt os, og vi finder
+                            sammen den der passer bedst til dit projekt.
+                        </p>
+                        <div className="wheel-wrapper">
+                            <InteractiveColorWheel />
+                            <p className="wheel-caption">
+                                Her er de farver, vi arbejder med.
+                            </p>
+                        </div>
+                        <p className="text-sage-600 italic">
+                            Fandt du ikke hvad du ledte efter? Kontakt os alligevel, så tager vi
+                            en snak om, hvordan vi kan hjælpe dig.
+                        </p>
+                    </div>
 
-      <style jsx>{`
-        .services-container {
-          text-align: center;
-          padding: 4rem 2rem;
-          background-color: #f7f7f7;
-          color: #333;
-          max-width: 800px;
-          margin: 0 auto;
-        }
-
-        h1 {
-          font-size: 2.5rem;
-          margin-bottom: 1rem;
-          color: #0056b3;
-        }
-
-        .intro-text,
-        .highlight-text,
-        .info-text,
-        .cta-text {
-          font-size: 1.2rem;
-          line-height: 1.6;
-          margin-bottom: 1.5rem;
-        }
-
-        .highlight-text {
-          font-weight: bold;
-          color: #444;
-        }
-
-        .services-list {
-          list-style: none;
-          padding: 0;
-          margin-bottom: 2rem;
-        }
-
-        .services-list li {
-          font-size: 1.3rem;
-          padding: 0.75rem 0;
-          font-weight: bold;
-          background: #0056b3;
-          color: white;
-          border-radius: 5px;
-          margin: 0.5rem auto;
-          width: 60%;
-        }
-
-        .cta-text {
-          font-weight: bold;
-          color: #d9534f;
-        }
-
-        @media (max-width: 768px) {
-          h1 {
-            font-size: 2rem;
-          }
-
-          .services-list li {
-            width: 80%;
-          }
-        }
-      `}</style>
-    </>
-  );
+                </motion.div>
+            </div>
+        </div>
+    );
 }

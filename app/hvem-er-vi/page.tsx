@@ -18,7 +18,7 @@ export default function HvemErVi() {
 
         <p className="intro-text">
           <strong>Fugemester Clausen</strong> er din pålidelige partner inden for fugearbejde.  
-          Vi leverer professionelle løsninger til fugning af døre, vinduer, badeværelser og mere i Kolding og omegn.
+          Vi leverer professionelle løsninger til fugning af døre, vinduer, badeværelser med mere i Kolding og omegn
         </p>
 
         <p className="highlight-text">

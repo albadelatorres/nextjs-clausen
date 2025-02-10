@@ -115,7 +115,6 @@ const InteractiveColorWheel: React.FC = () => {
     return (
         <div style={{ textAlign: "center" }}>
             <h2>Vælg en fugefarve</h2>
-            <p>Arrastra la ruleta para girarla y ver el color “arriba”.</p>
 
             <div
                 style={{

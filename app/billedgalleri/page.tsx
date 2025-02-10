@@ -25,6 +25,7 @@ export default function BilledGalleri() {
       setSelectedIndex(emblaApi.selectedScrollSnap());
     };
     emblaApi.on("select", onSelect);
+    // Set the initial selected index.
     onSelect();
     return (): void => {
       emblaApi.off("select", onSelect);
@@ -68,7 +69,10 @@ export default function BilledGalleri() {
                           setSelectedImage({ src: pair.before, alt: `Før billede ${index + 1}` })
                         }
                       >
-                        <div className="w-full" style={{ position: "relative", height: "0", paddingBottom: "75%" }}>
+                        <div
+                          className="w-full"
+                          style={{ position: "relative", height: "0", paddingBottom: "75%" }}
+                        >
                           <Image
                             src={pair.before}
                             alt={`Før billede ${index + 1}`}
@@ -88,7 +92,10 @@ export default function BilledGalleri() {
                           setSelectedImage({ src: pair.after, alt: `Efter billede ${index + 1}` })
                         }
                       >
-                        <div className="w-full" style={{ position: "relative", height: "0", paddingBottom: "75%" }}>
+                        <div
+                          className="w-full"
+                          style={{ position: "relative", height: "0", paddingBottom: "75%" }}
+                        >
                           <Image
                             src={pair.after}
                             alt={`Efter billede ${index + 1}`}
@@ -158,7 +165,23 @@ export default function BilledGalleri() {
 
       {/* Fullscreen Image Dialog */}
       <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
-        <DialogContent className="max-w-screen-lg w-full h-[80vh] p-0">
+        <DialogContent className="max-w-screen-lg w-full h-[80vh] p-0 relative">
+          {/* Close Button */}
+          <button
+            onClick={() => setSelectedImage(null)}
+            className="absolute top-2 right-2 z-20 text-white bg-black bg-opacity-50 rounded-full p-2 hover:bg-opacity-70 transition-colors"
+            aria-label="Close"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
           {selectedImage && (
             <div className="relative w-full h-full">
               <Image

@@ -77,8 +77,14 @@ export default function HvadLaverVi() {
 
                     <div className="glass-panel rounded-2xl p-8 text-center space-y-6">
                         <p className="text-lg text-sage-700">
-                            Fugemateriale kommer i mange farver, så kontakt os, og vi finder
-                            sammen den der passer bedst til dit projekt.
+                            Fugemateriale fås i et bredt udvalg af typer, kvaliteter og farver.
+                            Til døre, vinduer, loft osv bruger vi en bemalbar højkvalitets fugemasse (MS-
+                            polymer) fra Soudal, en af Europas førende virksomheder indenfor branchen.
+                            Til vådrum som badeværelser, til køkkenbordplader osv bruger vi
+                            vådrumssilicone fra Dana Lim, Skandinaviens førende producent af bla.
+                            silicone.
+                            Vores farvehjul giver dig et hurtigt overblik over nogle af mulighederne – kontakt
+                            os, så vi sammen kan finde den bedste løsning til dit projekt.
                         </p>
                         <div className="wheel-wrapper">
                             <InteractiveColorWheel />

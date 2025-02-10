@@ -31,8 +31,12 @@ export default function HvemErVi() {
         </p>
 
         <p className="cta-text">
-          Kontakt <strong>Fugemester Clausen</strong> i dag for et godt tilbud på dit næste fugeprojekt –  
-          vi gør det ordentligt fra start til slut.
+        Kontakt Fugemester Clausen i dag for en uforpligtende snak om dit næste
+fugeprojekt!
+Vi leverer altid høj kvalitet og professionelt håndværk hele vejen igennem
+– fra start til slut. Uanset opgavens størrelse står vi klar med ekspertise
+og omhyggelig udførelse.
+Lad os tage en snak om dine behov – vi glæder os til at hjælpe dig!
         </p>
       </main>
 

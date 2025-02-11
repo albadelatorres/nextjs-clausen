@@ -1,41 +1,85 @@
 "use client";
 
+import { motion } from "framer-motion";
+
 export default function BadevaerelserKokkenPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-sage-50 to-sage-100 py-12">
-      <div className="container max-w-3xl mx-auto p-6 bg-white rounded shadow">
-        <h1 className="text-3xl font-bold mb-4">Badeværelser/Køkken</h1>
-        <p className="mb-4">
-          Hos Fugemester Clausen ved vi, at en professionelt udført fuge ikke bare handler om udseende – det er en afgørende del af beskyttelsen af dit hjem.
-        </p>
-        <p className="mb-4 font-semibold">Beskyt dit badeværelse og køkken med korrekt fugning:</p>
-        <ul className="list-disc list-inside mb-4 space-y-2">
-          <li>
-            <strong>Forebygger fugt- og vandskader:</strong> Vand og damp er en daglig udfordring i både køkken og bad. Korrekt fugning forhindrer vand i at trænge ind i vægge og gulve, hvilket reducerer risikoen for skimmelsvamp, råd og strukturelle skader.
-          </li>
-          <li>
-            <strong>Forlænger levetiden på dine materialer:</strong> Uden den rette fuge kan fugt og snavs nedbryde fliser, bordplader og vægge. En holdbar fuge sikrer, at dine overflader forbliver pæne og funktionelle i mange år.
-          </li>
-          <li>
-            <strong>Sikrer en ren og hygiejnisk løsning:</strong> Sprækker og utætte fuger kan samle snavs og bakterier. En korrekt udført fuge gør rengøringen lettere og skaber et sundere indeklima.
-          </li>
-          <li>
-            <strong>Giver en flot og professionel finish:</strong> Fugerne binder helheden sammen i dit køkken eller badeværelse og giver et smukt og harmonisk resultat.
-          </li>
-        </ul>
-        <p className="mb-4">
-          Vi fuger de vigtigste områder:
-          <br />
-          <strong>Badeværelse:</strong> Omkring bruseniche, badekar, håndvask, toilet og gulvfliser.
-          <br />
-          <strong>Køkken:</strong> Langs bordplader, køkkenvask og vægfliser.
-        </p>
-        <p className="mb-4">
-          Husk at det er vigtigt at vedligeholde og udskifte fuger, når de bliver porøse eller beskadigede, for at sikre maksimal beskyttelse og æstetik i dit badeværelse og køkken.
-        </p>
-        <p>
-          Hos Fugemester Clausen bruger vi kun kvalitetsfugemasse, der matcher behovene i både våde og tørre områder. Kontakt os i dag for en professionel og holdbar løsning!
-        </p>
+    <main className="min-h-screen bg-gradient-to-b from-sage-50 to-sage-100 pt-24">
+      <div className="container mx-auto px-4 py-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center space-y-4 mb-12"
+        >
+          <span className="inline-block px-4 py-1 rounded-full bg-sage-100 text-sage-700 text-sm font-medium">
+            Serviceydelser
+          </span>
+          <h1 className="text-4xl sm:text-5xl font-bold text-sage-900 tracking-tight">
+            Badeværelser/Køkken
+          </h1>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="max-w-3xl mx-auto glass-panel rounded-2xl p-6 sm:p-8 space-y-6"
+        >
+          <p className="text-lg text-sage-800">
+            Hos Fugemester Clausen ved vi, at en professionelt udført fuge ikke bare handler om udseende – det er en afgørende del af beskyttelsen af dit hjem.
+          </p>
+
+          <div>
+            <p className="text-lg font-semibold text-sage-900 mb-4">Beskyt dit badeværelse og køkken med korrekt fugning:</p>
+            <table className="w-full text-sage-700">
+              <tbody>
+                <tr className="border-b border-sage-200">
+                  <td className="py-2 pr-4 font-bold text-sage-900">Forebygger fugt- og vandskader:</td>
+                  <td className="py-2">
+                    Vand og damp er en daglig udfordring i både køkken og bad. Korrekt fugning forhindrer vand i at trænge ind i vægge og gulve, hvilket reducerer risikoen for skimmelsvamp, råd og strukturelle skader.
+                  </td>
+                </tr>
+                <tr className="border-b border-sage-200">
+                  <td className="py-2 pr-4 font-bold text-sage-900">Forlænger levetiden på dine materialer:</td>
+                  <td className="py-2">
+                    Uden den rette fuge kan fugt og snavs nedbryde fliser, bordplader og vægge. En holdbar fuge sikrer, at dine overflader forbliver pæne og funktionelle i mange år.
+                  </td>
+                </tr>
+                <tr className="border-b border-sage-200">
+                  <td className="py-2 pr-4 font-bold text-sage-900">Sikrer en ren og hygiejnisk løsning:</td>
+                  <td className="py-2">
+                    Sprækker og utætte fuger kan samle snavs og bakterier. En korrekt udført fuge gør rengøringen lettere og skaber et sundere indeklima.
+                  </td>
+                </tr>
+                <tr className="border-b border-sage-200">
+                  <td className="py-2 pr-4 font-bold text-sage-900">Giver en flot og professionel finish:</td>
+                  <td className="py-2">
+                    Fugerne binder helheden sammen i dit køkken eller badeværelse og giver et smukt og harmonisk resultat.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div className="border-l-4 border-sage-500 pl-6 py-2">
+            <p className="text-lg text-sage-700">
+              Vi fuger de vigtigste områder:
+              <br />
+              <strong className="text-sage-900">Badeværelse:</strong> Omkring bruseniche, badekar, håndvask, toilet og gulvfliser.
+              <br />
+              <strong className="text-sage-900">Køkken:</strong> Langs bordplader, køkkenvask og vægfliser.
+            </p>
+          </div>
+
+          <p className="text-sage-700">
+            Husk at det er vigtigt at vedligeholde og udskifte fuger, når de bliver porøse eller beskadigede, for at sikre maksimal beskyttelse og æstetik i dit badeværelse og køkken.
+          </p>
+
+          <p className="text-sage-700 font-medium">
+            Hos Fugemester Clausen bruger vi kun kvalitetsfugemasse, der matcher behovene i både våde og tørre områder. Kontakt os i dag for en professionel og holdbar løsning!
+          </p>
+        </motion.div>
       </div>
     </main>
   );

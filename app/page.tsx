@@ -135,7 +135,7 @@ sikrer et professionelt resultat fra start til slut!"
                   Få professionel fugning til konkurrencedygtige priser – vi beskytter dit hjem med moderne teknologi og præcision.
                 </p>
                 <Link 
-                  href="/kontakt" 
+                  href="/#kontakt" 
                   className="inline-block px-8 py-3 bg-sage-600 text-white rounded-lg hover:bg-sage-700 transition-colors duration-200"
                 >
                   Få et uforpligtende tilbud
@@ -186,7 +186,7 @@ sikrer et professionelt resultat fra start til slut!"
           </div>
         </section>
         {/* Contact Form */}
-        <section className="py-20 bg-white/50">
+        <section id="kontakt" className="py-20 bg-white/50">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

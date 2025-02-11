@@ -6,7 +6,7 @@ import Image from "next/image";
 import { Home, Menu, X } from "lucide-react";
 import { Geist, Geist_Mono } from "next/font/google";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,11 +18,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// Update the Kontakt link to point to the home page with a hash.
 const navItems = [
   { href: "/hvem-er-vi", label: "Hvem er vi" },
   { href: "/hvad-laver-vi", label: "Hvad laver vi" },
   { href: "/billedgalleri", label: "Billedgalleri" },
-  { href: "/kontakt", label: "Kontakt" },
+  { href: "/#kontakt", label: "Kontakt" },
 ];
 
 export default function RootLayout({
@@ -31,6 +32,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // Set smooth scroll behavior
+  useEffect(() => {
+    document.documentElement.style.scrollBehavior = "smooth";
+    return () => {
+      document.documentElement.style.scrollBehavior = "auto";
+    };
+  }, []);
 
   return (
     <html lang="da" className={`${geistSans.variable} ${geistMono.variable}`}>

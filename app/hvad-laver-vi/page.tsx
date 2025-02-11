@@ -2,8 +2,9 @@
 
 import { Card } from "@/components/ui/card";
 import InteractiveColorWheel from "../../components/ui/InteractiveColorWheel";
+import InteractiveColorWheelWetroom from "../../components/ui/InteractiveColorWheelWetroom";
 import { motion } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 const services = [
@@ -37,6 +38,9 @@ export default function HvadLaverVi() {
       document.documentElement.style.scrollBehavior = "auto";
     };
   }, []);
+
+  // State to toggle between the two wheels.
+  const [activeWheel, setActiveWheel] = useState("fugemasse");
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-sage-50 to-sage-100">
@@ -97,16 +101,54 @@ export default function HvadLaverVi() {
               loft osv bruger vi en bemalbar højkvalitets fugemasse (MS-polymer) fra Soudal, en af
               Europas førende virksomheder indenfor branchen. Til vådrum som badeværelser, til
               køkkenbordplader osv bruger vi vådrumssilicone fra Dana Lim, Skandinaviens førende
-              producent af bla. silicone. Vores farvehjul giver dig et hurtigt overblik over nogle af
-              mulighederne – kontakt os, så vi sammen kan finde den bedste løsning til dit projekt.
+              producent af bla. silicone.
             </p>
-            <div className="wheel-wrapper">
-              <InteractiveColorWheel />
-              <p className="wheel-caption">Her er de farver, vi arbejder med.</p>
+            <p className="text-lg text-sage-700">
+              Vi tilbyder forskellige farver afhængigt af, om du vælger fugemasse eller vådrumssilicone.
+              Skift mellem de to med knappen nedenfor for at se farveudvalget.
+            </p>
+
+            {/* Pill Toggle */}
+            <div className="flex justify-center">
+              <div className="inline-flex rounded-full border border-sage-300 overflow-hidden">
+                <button
+                  onClick={() => setActiveWheel("fugemasse")}
+                  className={`px-4 py-2 text-sm font-medium transition-colors ${
+                    activeWheel === "fugemasse"
+                      ? "bg-sage-700 text-white"
+                      : "bg-white text-sage-700"
+                  }`}
+                >
+                  Fugemasse
+                </button>
+                <button
+                  onClick={() => setActiveWheel("vadrumssilicone")}
+                  className={`px-4 py-2 text-sm font-medium transition-colors ${
+                    activeWheel === "vadrumssilicone"
+                      ? "bg-sage-700 text-white"
+                      : "bg-white text-sage-700"
+                  }`}
+                >
+                  Vådrumssilicone
+                </button>
+              </div>
             </div>
+
+            {/* Interactive Wheel */}
+            <div className="wheel-wrapper">
+              {activeWheel === "fugemasse" ? (
+                <InteractiveColorWheel />
+              ) : (
+                <InteractiveColorWheelWetroom />
+              )}
+              <p className="wheel-caption">
+                Her er de farver, vi arbejder med for{" "}
+                {activeWheel === "fugemasse" ? "fugemasse" : "vådrumssilicone"}.
+              </p>
+            </div>
+
             <p className="text-sage-600 italic">
-              Fandt du ikke hvad du ledte efter? Kontakt os alligevel, så tager vi en snak om, hvordan
-              vi kan hjælpe dig.
+              Fandt du ikke hvad du ledte efter? Kontakt os alligevel, så tager vi en snak om, hvordan vi kan hjælpe dig.
             </p>
           </div>
         </motion.div>

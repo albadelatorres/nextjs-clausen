@@ -29,6 +29,7 @@
     "react-responsive-carousel": "^3.2.23",
     "tailwindcss-animate":"^1.0.7",
     "lucide-react":"^0.475.0",
-    "embla-carousel-react":"^8.5.2"
+    "embla-carousel-react":"^8.5.2",
+    "@sendgrid/mail":"^8.1.4"
   }
 }

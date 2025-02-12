@@ -73,9 +73,9 @@ export default function Home() {
   };
 
   // Manejador del envío del formulario
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Marcar todos los campos como tocados
+    // Mark all fields as touched
     setTouched({
       navn: true,
       email: true,
@@ -84,27 +84,39 @@ export default function Home() {
       besked: true,
     });
 
-    // Si existen errores, no se envía el formulario
     if (Object.keys(errors).length > 0) {
       return;
     }
 
-    alert("Tak for din besked. Vi kontakter dig snarest.");
-    // Reiniciar el formulario
-    setFormData({
-      navn: "",
-      email: "",
-      telefon: "",
-      postnummer: "",
-      besked: "",
-    });
-    setTouched({
-      navn: false,
-      email: false,
-      telefon: false,
-      postnummer: false,
-      besked: false,
-    });
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      if (!res.ok) {
+        throw new Error("Failed to send email");
+      }
+      alert("Tak for din besked. Vi kontakter dig snarest.");
+      // Reset the form
+      setFormData({
+        navn: "",
+        email: "",
+        telefon: "",
+        postnummer: "",
+        besked: "",
+      });
+      setTouched({
+        navn: false,
+        email: false,
+        telefon: false,
+        postnummer: false,
+        besked: false,
+      });
+    } catch (error) {
+      console.error(error);
+      alert("Der opstod en fejl. Prøv venligst igen senere.");
+    }
   };
 
   return (
@@ -121,7 +133,7 @@ sikrer et professionelt resultat fra start til slut!"
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center">
           <div className="absolute inset-0 bg-gradient-to-b from-sage-900/70 to-sage-800/70">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -134,8 +146,8 @@ sikrer et professionelt resultat fra start til slut!"
                 <p className="text-xl text-white/90 mb-8">
                   Få professionel fugning til konkurrencedygtige priser – vi beskytter dit hjem med moderne teknologi og præcision.
                 </p>
-                <Link 
-                  href="/#kontakt" 
+                <Link
+                  href="/#kontakt"
                   className="inline-block px-8 py-3 bg-sage-600 text-white rounded-lg hover:bg-sage-700 transition-colors duration-200"
                 >
                   Få et uforpligtende tilbud
@@ -187,7 +199,7 @@ sikrer et professionelt resultat fra start til slut!"
         </section>
         {/* Contact Form */}
         <section id="kontakt" className="py-20 bg-white/50">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -196,7 +208,7 @@ sikrer et professionelt resultat fra start til slut!"
             <div className="glass-panel rounded-xl p-8">
               <h2 className="text-3xl font-bold text-sage-800 mb-6 text-center">Kontakt os</h2>
               <p className="text-sage-600 mb-8 text-center">Alle felter er obligatoriske *</p>
-              
+
               <form onSubmit={handleSubmit} noValidate className="space-y-6">
                 {[
                   { name: 'navn', label: 'Navn', type: 'text' },
@@ -205,7 +217,7 @@ sikrer et professionelt resultat fra start til slut!"
                   { name: 'postnummer', label: 'Postnummer', type: 'text' }
                 ].map((field) => (
                   <div key={field.name} className="form-group">
-                    <label 
+                    <label
                       htmlFor={field.name}
                       className="block text-sage-700 font-medium mb-2"
                     >
@@ -219,23 +231,22 @@ sikrer et professionelt resultat fra start til slut!"
                       value={formData[field.name as keyof typeof formData]}
                       onChange={handleChange}
                       onBlur={handleBlur}
-                      className={`w-full px-4 py-2 rounded-lg border ${
-                        touched[field.name as keyof typeof touched] && 
-                        errors[field.name] 
-                          ? 'border-red-500 focus:border-red-500' 
+                      className={`w-full px-4 py-2 rounded-lg border ${touched[field.name as keyof typeof touched] &&
+                          errors[field.name]
+                          ? 'border-red-500 focus:border-red-500'
                           : 'border-sage-200 focus:border-sage-500'
-                      } focus:outline-none transition-colors`}
+                        } focus:outline-none transition-colors`}
                     />
-                    {touched[field.name as keyof typeof touched] && 
-                     errors[field.name] && (
-                      <p className="mt-2 text-sm text-red-600">
-                        {errors[field.name]}
-                      </p>
-                    )}
+                    {touched[field.name as keyof typeof touched] &&
+                      errors[field.name] && (
+                        <p className="mt-2 text-sm text-red-600">
+                          {errors[field.name]}
+                        </p>
+                      )}
                   </div>
                 ))}
                 <div className="form-group">
-                  <label 
+                  <label
                     htmlFor="besked"
                     className="block text-sage-700 font-medium mb-2"
                   >
@@ -249,11 +260,10 @@ sikrer et professionelt resultat fra start til slut!"
                     value={formData.besked}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    className={`w-full px-4 py-2 rounded-lg border ${
-                      touched.besked && errors.besked 
-                        ? 'border-red-500 focus:border-red-500' 
+                    className={`w-full px-4 py-2 rounded-lg border ${touched.besked && errors.besked
+                        ? 'border-red-500 focus:border-red-500'
                         : 'border-sage-200 focus:border-sage-500'
-                    } focus:outline-none transition-colors`}
+                      } focus:outline-none transition-colors`}
                   ></textarea>
                   {touched.besked && errors.besked && (
                     <p className="mt-2 text-sm text-red-600">

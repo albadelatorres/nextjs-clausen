@@ -56,12 +56,6 @@ export default function DoreVinduerPage() {
                   En god fuge hjælper med at dæmpe lydene udefra og giver et roligere hjem.
                 </td>
               </tr>
-              <tr className="border-b border-sage-200">
-                <td className="py-2 pr-4 font-bold text-sage-900">Stop insekter og skadedyr:</td>
-                <td className="py-2">
-                  Sprækker omkring vinduer og døre kan give adgang til insekter og små skadedyr. En ordentlig fuge lukker af for ubudne gæster.
-                </td>
-              </tr>
               <tr>
                 <td className="py-2 pr-4 font-bold text-sage-900">Pæn finish og længere holdbarhed:</td>
                 <td className="py-2">

@@ -41,33 +41,15 @@ export default function GulvLoftPage() {
                   </td>
                 </tr>
                 <tr className="border-b border-sage-200">
-                  <td className="py-2 pr-4 font-bold text-sage-900">Energibesparelse:</td>
-                  <td className="py-2">
-                    En tætsluttende fuge forhindrer træk og varmetab, hvilket kan reducere energiforbruget og forbedre indeklimaet.
-                  </td>
-                </tr>
-                <tr className="border-b border-sage-200">
                   <td className="py-2 pr-4 font-bold text-sage-900">Bedre lydisolering:</td>
                   <td className="py-2">
                     Små sprækker kan lade lyd trænge igennem. Fugning hjælper med at dæmpe støj mellem rum og etager.
                   </td>
                 </tr>
                 <tr className="border-b border-sage-200">
-                  <td className="py-2 pr-4 font-bold text-sage-900">Beskyt mod fugt og skimmel:</td>
-                  <td className="py-2">
-                    Utætte samlinger kan føre til fugtskader og skimmelvækst. En god fuge beskytter dit hjem mod fugtindtrængning.
-                  </td>
-                </tr>
-                <tr className="border-b border-sage-200">
                   <td className="py-2 pr-4 font-bold text-sage-900">Forlænger bygningens levetid:</td>
                   <td className="py-2">
                     Fugning forebygger revner og skader, der kan opstå på grund af temperaturændringer og bygningsbevægelser.
-                  </td>
-                </tr>
-                <tr>
-                  <td className="py-2 pr-4 font-bold text-sage-900">Opfylder bygningsreglementet:</td>
-                  <td className="py-2">
-                    I mange tilfælde er korrekt fugning et krav for at sikre energieffektivitet og brandsikring i byggeriet.
                   </td>
                 </tr>
               </tbody>

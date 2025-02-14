@@ -54,7 +54,7 @@ export default function SandbestroogedeFugerDilationfugerPage() {
           <div>
             <h2 className="text-2xl font-semibold text-sage-900 mb-4">Dilationsfuger – Beskyttelse mod revner og skader</h2>
             <p className="text-sage-700 mb-4">
-              Dilationsfuger, også kendt som ekspansionsfuger, er designet til at absorbere bevægelser i byggematerialer forårsaget af temperaturudsving, fugt og strukturel belastning. Vi anvender elastiske materialer som silikone, gummi og skum for optimal fleksibilitet.
+              Dilationsfuger, også kendt som ekspansionsfuger, er designet til at absorbere bevægelser i byggematerialer forårsaget af temperaturudsving, fugt og strukturel belastning. Vi anvender elastiske materialer for optimal fleksibilitet.
             </p>
 
             <p className="font-semibold text-sage-900 mb-2">Hvorfor vælge dilationsfuger?</p>

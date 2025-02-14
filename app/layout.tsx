@@ -24,6 +24,7 @@ const navItems = [
   { href: "/hvad-laver-vi", label: "Hvad laver vi" },
   { href: "/billedgalleri", label: "Billedgalleri" },
   { href: "/#kontakt", label: "Kontakt" },
+  { href: "/privatlivspolitik", label: "Privatlivspolitik" },
 ];
 
 export default function RootLayout({
@@ -119,6 +120,17 @@ export default function RootLayout({
 
         {/* Add padding to account for fixed navbar */}
         <main className="pt-16">{children}</main>
+        {/* Footer / Bottom Bar */}
+        <footer className="bg-gray-200 text-sage-700 py-6">
+          <div className="container mx-auto px-4 text-center">
+            <p className="font-bold text-lg">Fugemester Clausen</p>
+            <p>Daniel Segato Clausen</p>
+            <p>Elkærholmparken 6B, 6040 Egtved, Denmark</p>
+            <p className="mt-2 text-sm">
+              © {new Date().getFullYear()} Fugemester Clausen. All rights reserved.
+            </p>
+          </div>
+        </footer>
       </body>
     </html>
   );

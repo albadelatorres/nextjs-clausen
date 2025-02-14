@@ -144,8 +144,7 @@ sikrer et professionelt resultat fra start til slut!"
                   Velkommen til Fugemester Clausen
                 </h1>
                 <p className="text-xl text-white/90 mb-8">
-                  Få professionel fugning til konkurrencedygtige priser – vi beskytter dit hjem med moderne teknologi og præcision.
-                </p>
+                  Få professionel fugning til konkurrencedygtige priser – vi beskytter dit hjem med effektive løsninger og præcision.                </p>
                 <Link
                   href="/#kontakt"
                   className="inline-block px-8 py-3 bg-sage-600 text-white rounded-lg hover:bg-sage-700 transition-colors duration-200"
@@ -232,9 +231,9 @@ sikrer et professionelt resultat fra start til slut!"
                       onChange={handleChange}
                       onBlur={handleBlur}
                       className={`w-full px-4 py-2 rounded-lg border ${touched[field.name as keyof typeof touched] &&
-                          errors[field.name]
-                          ? 'border-red-500 focus:border-red-500'
-                          : 'border-sage-200 focus:border-sage-500'
+                        errors[field.name]
+                        ? 'border-red-500 focus:border-red-500'
+                        : 'border-sage-200 focus:border-sage-500'
                         } focus:outline-none transition-colors`}
                     />
                     {touched[field.name as keyof typeof touched] &&
@@ -261,8 +260,8 @@ sikrer et professionelt resultat fra start til slut!"
                     onChange={handleChange}
                     onBlur={handleBlur}
                     className={`w-full px-4 py-2 rounded-lg border ${touched.besked && errors.besked
-                        ? 'border-red-500 focus:border-red-500'
-                        : 'border-sage-200 focus:border-sage-500'
+                      ? 'border-red-500 focus:border-red-500'
+                      : 'border-sage-200 focus:border-sage-500'
                       } focus:outline-none transition-colors`}
                   ></textarea>
                   {touched.besked && errors.besked && (
@@ -280,6 +279,20 @@ sikrer et professionelt resultat fra start til slut!"
               </form>
             </div>
           </motion.div>
+        </section>
+        <section className="py-16 bg-sage-100">
+          <h2 className="text-3xl font-bold text-sage-800 mb-4 text-center">Hvor kan du finde os</h2>
+          <p className="text-center text-sage-700 mb-6">Elkærholmparken 6B, 6040 Egtved, Denmark</p>
+          <div className="mx-auto max-w-2xl h-96 border rounded-lg overflow-hidden">
+            <iframe
+              title="Google Maps Location"
+              width="100%"
+              height="100%"
+              loading="lazy"
+              allowFullScreen
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.440489034503!2d9.3295625!3d55.5999395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sElk%C3%A6rholmparken%206B%2C%206040%20Egtved%2C%20Denmark!5e0!3m2!1sen!2sdk!4v1700000000000"
+            ></iframe>
+          </div>
         </section>
       </main>
     </>

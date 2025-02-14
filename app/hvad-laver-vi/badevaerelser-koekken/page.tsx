@@ -16,7 +16,7 @@ export default function BadevaerelserKokkenPage() {
             Serviceydelser
           </span>
           <h1 className="text-4xl sm:text-5xl font-bold text-sage-900 tracking-tight">
-            Badeværelser/Køkken
+            Badeværelser & Fliser/Køkken
           </h1>
         </motion.div>
 
@@ -24,14 +24,15 @@ export default function BadevaerelserKokkenPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-3xl mx-auto glass-panel rounded-2xl p-6 sm:p-8 space-y-6"
+          className="max-w-3xl mx-auto glass-panel rounded-2xl p-6 sm:p-8 space-y-8"
         >
           <p className="text-lg text-sage-800">
             Hos Fugemester Clausen ved vi, at en professionelt udført fuge ikke bare handler om udseende – det er en afgørende del af beskyttelsen af dit hjem.
+            En korrekt fugning er afgørende for både holdbarhed, funktionalitet og det æstetiske udtryk.
           </p>
 
           <div>
-            <p className="text-lg font-semibold text-sage-900 mb-4">Beskyt dit badeværelse og køkken med korrekt fugning:</p>
+            <p className="text-lg font-semibold text-sage-900 mb-4">Fordele ved professionel fugning i vådrum og flisearbejde:</p>
             <table className="w-full text-sage-700">
               <tbody>
                 <tr className="border-b border-sage-200">
@@ -41,21 +42,33 @@ export default function BadevaerelserKokkenPage() {
                   </td>
                 </tr>
                 <tr className="border-b border-sage-200">
-                  <td className="py-2 pr-4 font-bold text-sage-900">Forlænger levetiden på dine materialer:</td>
+                  <td className="py-2 pr-4 font-bold text-sage-900">Forlænger materialernes levetid:</td>
                   <td className="py-2">
-                    Uden den rette fuge kan fugt og snavs nedbryde fliser, bordplader og vægge. En holdbar fuge sikrer, at dine overflader forbliver pæne og funktionelle i mange år.
+                    Uden den rette fuge kan fugt og snavs nedbryde fliser, bordplader og vægge. En holdbar fuge beskytter kanterne og absorberer små bevægelser, så overflader forbliver pæne og funktionelle i mange år.
                   </td>
                 </tr>
                 <tr className="border-b border-sage-200">
-                  <td className="py-2 pr-4 font-bold text-sage-900">Sikrer en ren og hygiejnisk løsning:</td>
+                  <td className="py-2 pr-4 font-bold text-sage-900">Sikrer hygiejne og renlighed:</td>
                   <td className="py-2">
-                    Sprækker og utætte fuger kan samle snavs og bakterier. En korrekt udført fuge gør rengøringen lettere og skaber et sundere indeklima.
+                    Fugning lukker mellemrummene mellem fliser og gør det sværere for skidt og bakterier at samle sig. En korrekt udført fuge gør rengøringen lettere og skaber et sundere indeklima.
                   </td>
                 </tr>
                 <tr className="border-b border-sage-200">
-                  <td className="py-2 pr-4 font-bold text-sage-900">Giver en flot og professionel finish:</td>
+                  <td className="py-2 pr-4 font-bold text-sage-900">Professionel finish:</td>
                   <td className="py-2">
-                    Fugerne binder helheden sammen i dit køkken eller badeværelse og giver et smukt og harmonisk resultat.
+                    Fugerne giver et pænt og ensartet look, der forbedrer hele rummets æstetik. Vi tilbyder flere farver og typer fugemasser, så du kan vælge den løsning, der passer bedst til dit projekt.
+                  </td>
+                </tr>
+                <tr className="border-b border-sage-200">
+                  <td className="py-2 pr-4 font-bold text-sage-900">Beskytter mod bevægelser:</td>
+                  <td className="py-2">
+                    Fugemassen hjælper med at optage bevægelser i fliser og underlag, hvilket mindsker risikoen for sprækker og skader.
+                  </td>
+                </tr>
+                <tr>
+                  <td className="py-2 pr-4 font-bold text-sage-900">Øget sikkerhed:</td>
+                  <td className="py-2">
+                    I våde områder kan fuger skabe mere friktion, så risikoen for at glide reduceres.
                   </td>
                 </tr>
               </tbody>
@@ -69,6 +82,10 @@ export default function BadevaerelserKokkenPage() {
               <strong className="text-sage-900">Badeværelse:</strong> Omkring bruseniche, badekar, håndvask, toilet og gulvfliser.
               <br />
               <strong className="text-sage-900">Køkken:</strong> Langs bordplader, køkkenvask og vægfliser.
+              <br />
+              <strong className="text-sage-900">Flisearbejde:</strong> Komplette fladeløsninger i både vådrum og tørre områder.
+              <br />
+              <strong className="text-sage-900">Skabe:</strong> Alle skabe fuldt dækket.
             </p>
           </div>
 

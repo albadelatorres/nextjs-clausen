@@ -53,7 +53,7 @@ export default function KlinkerFliserPage() {
               <tr className="border-b border-sage-200">
                 <td className="py-2 pr-4 font-bold text-sage-900">Giver en flot finish:</td>
                 <td className="py-2">
-                  Fugerne skaber et ensartet og professionelt look, der løfter hele rummet. Vi tilbyder flere farver og typer fugemasse, så du kan få det udtryk, der passer bedst til dit projekt.
+                Fugerne giver et pænt og ensartet look, der forbedre hele rummets æstetik. Vi tilbyder flere farver og typer fugemasser, så du kan vælge den løsning, der passer bedst til dit projekt.
                 </td>
               </tr>
               <tr className="border-b border-sage-200">

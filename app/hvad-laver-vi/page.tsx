@@ -11,8 +11,6 @@ const services = [
   "Døre/Vinduer",
   "Gulv/Loft",
   "Badeværelser/Køkken",
-  "Klinker/Fliser",
-  "Sandbestrøede fuger/Dilationfuger",
   "Udskiftninger af gummifuger",
 ];
 
@@ -142,12 +140,11 @@ export default function HvadLaverVi() {
                 <InteractiveColorWheelWetroom />
               )}
               <p className="wheel-caption">
-                Her er de farver, vi arbejder med for{" "}
-                {activeWheel === "fugemasse" ? "fugemasse" : "vådrumssilicone"}.
+                Her er de {activeWheel === "fugemasse" ? "fugemassefarver" : "vådrumssiliconefarver"}, vi arbejder med.
               </p>
             </div>
 
-            <p className="text-sage-600 italic">
+            <p className="text-sage-600">
               Fandt du ikke hvad du ledte efter? Kontakt os alligevel, så tager vi en snak om, hvordan vi kan hjælpe dig.
             </p>
           </div>

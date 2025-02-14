@@ -44,6 +44,10 @@ export default function UdskiftningAfGummifugerPage() {
               <li>Har misfarvning eller skimmel</li>
             </ul>
           </div>
+          <p className="text-lg text-sage-800">
+            Udskiftning af gummifuger er en vigtig vedligeholdelsesopgave, der beskytter mod fugtskader og forbedre udseendet af dit hjem. Ved at vælge de rette materialer og følge de korrekte trin kan du sikre en langtidsholdbar og flot finish.
+            Kontakt os i dag for en snak om, hvad vi kan gøre for dig!
+          </p>
         </motion.div>
       </div>
     </main>

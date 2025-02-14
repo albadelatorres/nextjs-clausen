@@ -42,7 +42,7 @@ export default function BilledGalleri() {
           className="text-center space-y-4 mb-12"
         >
           <span className="inline-block px-4 py-1 rounded-full bg-sage-100 text-sage-700 text-sm font-medium">
-            Før og Efter
+            Se vores arbejde
           </span>
           <h1 className="text-4xl sm:text-5xl font-bold text-sage-900 tracking-tight">
             Billedgalleri

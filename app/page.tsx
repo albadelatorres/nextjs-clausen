@@ -24,6 +24,9 @@ export default function Home() {
     besked: false,
   });
 
+  // Estado para la notificación (toast)
+  const [notification, setNotification] = useState<string | null>(null);
+
   // Función para validar el formato de email
   const isValidEmail = (email: string) => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -75,7 +78,7 @@ export default function Home() {
   // Manejador del envío del formulario
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Mark all fields as touched
+    // Marcar todos los campos como touched
     setTouched({
       navn: true,
       email: true,
@@ -97,8 +100,13 @@ export default function Home() {
       if (!res.ok) {
         throw new Error("Failed to send email");
       }
-      alert("Tak for din besked. Vi kontakter dig snarest.");
-      // Reset the form
+      // Mostrar notificación en lugar de alert()
+      setNotification("Tak for din besked. Vi kontakter dig snarest.");
+      setTimeout(() => {
+        setNotification(null);
+      }, 5000);
+
+      // Resetear el formulario
       setFormData({
         navn: "",
         email: "",
@@ -115,7 +123,10 @@ export default function Home() {
       });
     } catch (error) {
       console.error(error);
-      alert("Der opstod en fejl. Prøv venligst igen senere.");
+      setNotification("Der opstod en fejl. Prøv venligst igen senere.");
+      setTimeout(() => {
+        setNotification(null);
+      }, 5000);
     }
   };
 
@@ -125,11 +136,17 @@ export default function Home() {
         <title>Fugemester Clausen | Professionel fugning</title>
         <meta
           name="description"
-          content="Fugemester Clausen tilbyder professionel fugearbejde. Kontakt os i dag for en uforpligtende snak om dit næste fugeprojekt. Vi
-sikrer et professionelt resultat fra start til slut!"
+          content="Fugemester Clausen tilbyder professionel fugearbejde. Kontakt os i dag for en uforpligtende snak om dit næste fugeprojekt. Vi sikrer et professionelt resultat fra start til slut!"
         />
       </Head>
       <main className="bg-gradient-to-b from-sage-50 to-sage-100">
+        {/* Notification Toast */}
+        {notification && (
+          <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-4 py-2 rounded shadow-lg z-50">
+            {notification}
+          </div>
+        )}
+
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center">
           <div className="absolute inset-0 bg-gradient-to-b from-sage-900/70 to-sage-800/70">
@@ -144,7 +161,8 @@ sikrer et professionelt resultat fra start til slut!"
                   Velkommen til Fugemester Clausen
                 </h1>
                 <p className="text-xl text-white/90 mb-8">
-                  Få professionel fugning til konkurrencedygtige priser – vi beskytter dit hjem med effektive løsninger og præcision.                </p>
+                  Få professionel fugning til konkurrencedygtige priser – vi beskytter dit hjem med effektive løsninger og præcision.
+                </p>
                 <Link
                   href="/#kontakt"
                   className="inline-block px-8 py-3 bg-sage-600 text-white rounded-lg hover:bg-sage-700 transition-colors duration-200"
@@ -155,6 +173,7 @@ sikrer et professionelt resultat fra start til slut!"
             </motion.div>
           </div>
         </section>
+
         {/* Service Cards */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -162,19 +181,22 @@ sikrer et professionelt resultat fra start til slut!"
               {[
                 {
                   title: "Hvem er vi",
-                  description: "Vi leverer kvalitetsfugning til både nybyggeri og renovering. Vores styrker er præcision, pålidelighed og en jordnær tilgang – det er derfor, vores kunder vælger os.",
-                  href: "/hvem-er-vi"
+                  description:
+                    "Vi leverer kvalitetsfugning til både nybyggeri og renovering. Vores styrker er præcision, pålidelighed og en jordnær tilgang – det er derfor, vores kunder vælger os.",
+                  href: "/hvem-er-vi",
                 },
                 {
                   title: "Hvad laver vi",
-                  description: "Vi tilbyder et bredt udvalg af fugearbejde – fra vinduer og døre til badeværelser og specialprojekter.",
-                  href: "/hvad-laver-vi"
+                  description:
+                    "Vi tilbyder et bredt udvalg af fugearbejde – fra vinduer og døre til badeværelser og specialprojekter.",
+                  href: "/hvad-laver-vi",
                 },
                 {
                   title: "Billedgalleri",
-                  description: "Udforsk vores galleri og se eksempler på vores præcise og kvalitetsbevidste fugearbejde.",
-                  href: "/billedgalleri"
-                }
+                  description:
+                    "Udforsk vores galleri og se eksempler på vores præcise og kvalitetsbevidste fugearbejde.",
+                  href: "/billedgalleri",
+                },
               ].map((card, index) => (
                 <motion.div
                   key={card.title}
@@ -183,7 +205,9 @@ sikrer et professionelt resultat fra start til slut!"
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="glass-panel rounded-xl p-6 hover-card"
                 >
-                  <h2 className="text-2xl font-bold text-sage-800 mb-4">{card.title}</h2>
+                  <h2 className="text-2xl font-bold text-sage-800 mb-4">
+                    {card.title}
+                  </h2>
                   <p className="text-sage-600 mb-6">{card.description}</p>
                   <Link
                     href={card.href}
@@ -196,6 +220,7 @@ sikrer et professionelt resultat fra start til slut!"
             </div>
           </div>
         </section>
+
         {/* Contact Form */}
         <section id="kontakt" className="py-20 bg-white/50">
           <motion.div
@@ -205,15 +230,19 @@ sikrer et professionelt resultat fra start til slut!"
             className="container mx-auto px-4 max-w-2xl"
           >
             <div className="glass-panel rounded-xl p-8">
-              <h2 className="text-3xl font-bold text-sage-800 mb-6 text-center">Kontakt os</h2>
-              <p className="text-sage-600 mb-8 text-center">Alle felter er obligatoriske *</p>
+              <h2 className="text-3xl font-bold text-sage-800 mb-6 text-center">
+                Kontakt os
+              </h2>
+              <p className="text-sage-600 mb-8 text-center">
+                Alle felter er obligatoriske *
+              </p>
 
               <form onSubmit={handleSubmit} noValidate className="space-y-6">
                 {[
-                  { name: 'navn', label: 'Navn', type: 'text' },
-                  { name: 'email', label: 'Email', type: 'email' },
-                  { name: 'telefon', label: 'Telefon', type: 'tel' },
-                  { name: 'postnummer', label: 'Postnummer', type: 'text' }
+                  { name: "navn", label: "Navn", type: "text" },
+                  { name: "email", label: "Email", type: "email" },
+                  { name: "telefon", label: "Telefon", type: "tel" },
+                  { name: "postnummer", label: "Postnummer", type: "text" },
                 ].map((field) => (
                   <div key={field.name} className="form-group">
                     <label
@@ -230,11 +259,12 @@ sikrer et professionelt resultat fra start til slut!"
                       value={formData[field.name as keyof typeof formData]}
                       onChange={handleChange}
                       onBlur={handleBlur}
-                      className={`w-full px-4 py-2 rounded-lg border ${touched[field.name as keyof typeof touched] &&
+                      className={`w-full px-4 py-2 rounded-lg border ${
+                        touched[field.name as keyof typeof touched] &&
                         errors[field.name]
-                        ? 'border-red-500 focus:border-red-500'
-                        : 'border-sage-200 focus:border-sage-500'
-                        } focus:outline-none transition-colors`}
+                          ? "border-red-500 focus:border-red-500"
+                          : "border-sage-200 focus:border-sage-500"
+                      } focus:outline-none transition-colors`}
                     />
                     {touched[field.name as keyof typeof touched] &&
                       errors[field.name] && (
@@ -259,10 +289,11 @@ sikrer et professionelt resultat fra start til slut!"
                     value={formData.besked}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    className={`w-full px-4 py-2 rounded-lg border ${touched.besked && errors.besked
-                      ? 'border-red-500 focus:border-red-500'
-                      : 'border-sage-200 focus:border-sage-500'
-                      } focus:outline-none transition-colors`}
+                    className={`w-full px-4 py-2 rounded-lg border ${
+                      touched.besked && errors.besked
+                        ? "border-red-500 focus:border-red-500"
+                        : "border-sage-200 focus:border-sage-500"
+                    } focus:outline-none transition-colors`}
                   ></textarea>
                   {touched.besked && errors.besked && (
                     <p className="mt-2 text-sm text-red-600">
@@ -280,9 +311,15 @@ sikrer et professionelt resultat fra start til slut!"
             </div>
           </motion.div>
         </section>
+
+        {/* Location Section */}
         <section className="py-16 bg-sage-100">
-          <h2 className="text-3xl font-bold text-sage-800 mb-4 text-center">Hvor kan du finde os</h2>
-          <p className="text-center text-sage-700 mb-6">Elkærholmparken 6B, 6040 Egtved, Denmark</p>
+          <h2 className="text-3xl font-bold text-sage-800 mb-4 text-center">
+            Hvor kan du finde os
+          </h2>
+          <p className="text-center text-sage-700 mb-6">
+            Elkærholmparken 6B, 6040 Egtved, Denmark
+          </p>
           <div className="mx-auto max-w-2xl h-96 border rounded-lg overflow-hidden">
             <iframe
               title="Google Maps Location"

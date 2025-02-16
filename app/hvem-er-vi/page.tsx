@@ -25,20 +25,20 @@ export default function HvemErVi() {
             className="glass-panel rounded-2xl p-6 sm:p-8 space-y-6"
           >
             <p className="text-lg text-sage-800 leading-relaxed">
-              <strong className="text-sage-900">Fugemester Clausen</strong> er din pålidelige 
-              partner inden for fugearbejde. Vi leverer professionelle løsninger til fugning 
+              <strong className="text-sage-900">Fugemester Clausen</strong> er din pålidelige
+              partner inden for fugearbejde. Vi leverer professionelle løsninger til fugning
               af døre, vinduer, badeværelser med mere i Kolding og omegn.
             </p>
             <div className="border-l-4 border-sage-500 pl-6 py-2">
               <p className="text-lg text-sage-700">
-                Med fokus på <strong className="text-sage-900">kvalitet og holdbarhed</strong> sikrer 
+                Med fokus på <strong className="text-sage-900">kvalitet og holdbarhed</strong> sikrer
                 vi tætte fuger, der beskytter dit hjem mod fugt og slid.
               </p>
             </div>
             <p className="text-lg text-sage-700">
               Uanset om det er <strong className="text-sage-800">nybyggeri</strong> eller {" "}
-              <strong className="text-sage-800">renovering</strong>, er vi eksperter i præcision 
-              og effektivitet. Vores mange års erfaring sikrer, at du får en løsning, der holder 
+              <strong className="text-sage-800">renovering</strong>, er vi eksperter i præcision
+              og effektivitet. Vores mange års erfaring sikrer, at du får en løsning, der holder
               i længden.
             </p>
           </motion.div>
@@ -49,12 +49,14 @@ export default function HvemErVi() {
             className="glass-panel rounded-2xl p-6 sm:p-8 text-center space-y-4"
           >
             <p className="text-lg text-sage-700">
-              Kontakt Fugemester Clausen i dag for en uforpligtende snak om dit næste 
-              fugeprojekt!
+              <a href="/#kontakt" className="text-sage-800 underline hover:text-sage-900 transition-colors">
+                Kontakt Fugemester Clausen
+              </a>{" "}
+              i dag for en uforpligtende snak om dit næste fugeprojekt!
             </p>
             <p className="text-sage-700">
-              Vi leverer altid høj kvalitet og professionelt håndværk hele vejen igennem 
-              – fra start til slut. Uanset opgavens størrelse står vi klar med ekspertise 
+              Vi leverer altid høj kvalitet og professionelt håndværk hele vejen igennem
+              – fra start til slut. Uanset opgavens størrelse står vi klar med ekspertise
               og omhyggelig udførelse.
             </p>
             <p className="text-sage-700 font-medium">

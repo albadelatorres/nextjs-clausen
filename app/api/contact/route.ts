@@ -19,10 +19,10 @@ export async function POST(request: Request) {
 Vi har modtaget din besked og vil kontakte dig snarest. Tak for din interesse i Fugemester Clausen!
 
 Med venlig hilsen,
-Daniel.`,
+Daniel`,
       html: `<p>Hej ${navn},</p>
              <p>Vi har modtaget din besked og vil kontakte dig snarest. Tak for din interesse i <strong>Fugemester Clausen</strong>!</p>
-             <p>Med venlig hilsen,<br/>Daniel.</p>`,
+             <p>Med venlig hilsen,<br/>Daniel</p>`,
     };
 
     // Send the email via SendGrid

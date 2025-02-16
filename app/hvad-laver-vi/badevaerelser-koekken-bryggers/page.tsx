@@ -78,9 +78,6 @@ export default function BadevaerelserKokkenPage() {
               <strong className="text-sage-900">Køkken/Bryggers:</strong> Langs bordplader, skabe og mellem sokler, klinker og
               fliser.
               <br />
-              <strong className="text-sage-900">Flisearbejde:</strong> Komplette fladeløsninger i både vådrum og tørre områder.
-              <br />
-              <strong className="text-sage-900">Skabe:</strong> Alle skabe fuldt dækket.
             </p>
           </div>
 

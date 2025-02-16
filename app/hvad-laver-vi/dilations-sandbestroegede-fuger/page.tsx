@@ -16,7 +16,7 @@ export default function SandbestroogedeFugerDilationfugerPage() {
             Serviceydelser
           </span>
           <h1 className="text-4xl sm:text-5xl font-bold text-sage-900 tracking-tight">
-            Sandbestrøgede fuger / Dilationsfuger
+          Dilationsfuger / Sandbestrøgede fuger
           </h1>
         </motion.div>
 
@@ -29,8 +29,8 @@ export default function SandbestroogedeFugerDilationfugerPage() {
           <p className="text-lg text-sage-800">
             Hos Fugemester Clausen er vi specialister i holdbare og fleksible
             fugeløsninger, der sikrer stabilitet og lang levetid for dine
-            byggeprojekter. Vi tilbyder professionel udførelse af både sandbestrøgede
-            fuger og dilationsfuger til en bred vifte af anvendelsesområder.          </p>
+            byggeprojekter. Vi tilbyder professionel udførelse af både dilationsfuger og sandbestrøgede
+            fuger til en bred vifte af anvendelsesområder.          </p>
 
 
           <div>

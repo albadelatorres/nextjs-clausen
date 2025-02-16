@@ -50,17 +50,9 @@ export default function SandbestroogedeFugerDilationfugerPage() {
           </div>
 
           <p className="font-semibold text-sage-900 mb-2">
-            Nogle gange vælger man at sandbestryge dilationsfuger. Her er nogle af de
-            vigtigste årsager:            </p>
+            Sandbestrøgede fuger:            </p>
           <ul className="list-disc list-inside mb-4 space-y-2 text-sage-700 pl-4">
-            <li>Beskytte fugemassen – Sandlaget beskytter den elastiske fugemasse
-              mod mekanisk slid, UV-stråling og vejrpåvirkninger, hvilket forlænger fugens
-              levetid.</li>
-            <li>Forbedre fugens stabilitet – Ved at tilføre sand på fugens overflade
-              forhindrer man, at fugemassen klæber til omkringliggende materialer under
-              hærdning, hvilket sikrer, at den kan bevæge sig frit og dermed opretholde
-              sin funktion som dilationsfuge.</li>
-            <li>Æstetiske årsager – I nogle tilfælde sandbestrøs fugerne for at give
+            <li>I nogle tilfælde sandbestrøs fugerne for at give
               dem et mere naturligt udseende, så de bedre matcher det omkringliggende
               materiale, f.eks. i flisebelægninger eller betonoverflader.</li>
           </ul>

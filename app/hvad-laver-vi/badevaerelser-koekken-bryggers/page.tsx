@@ -59,12 +59,6 @@ export default function BadevaerelserKokkenPage() {
                     Fugerne giver et pænt og ensartet look, der forbedrer hele rummets æstetik. Vi tilbyder flere farver og typer fugemasser, så du kan vælge den løsning, der passer bedst til dit projekt.
                   </td>
                 </tr>
-                <tr className="border-b border-sage-200">
-                  <td className="py-2 pr-4 font-bold text-sage-900">Reducerer risikoen for revner:</td>
-                  <td className="py-2">
-                    Fliser og klinker kan med tiden bevæge sig. Fugemassen hjælper med at
-                    optage disse bevægelser og mindsker risikoen for sprækker.                  </td>
-                </tr>
               </tbody>
             </table>
           </div>

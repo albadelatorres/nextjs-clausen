@@ -16,7 +16,7 @@ export default function BadevaerelserKokkenPage() {
             Serviceydelser
           </span>
           <h1 className="text-4xl sm:text-5xl font-bold text-sage-900 tracking-tight">
-            Badeværelser & Fliser/Køkken
+            Badeværelser, Køkken og Bryggers
           </h1>
         </motion.div>
 
@@ -32,7 +32,7 @@ export default function BadevaerelserKokkenPage() {
           </p>
 
           <div>
-            <p className="text-lg font-semibold text-sage-900 mb-4">Fordele ved professionel fugning i vådrum og flisearbejde:</p>
+            <p className="text-lg font-semibold text-sage-900 mb-4">Korrekt fugning i badeværelse, køkken og bryggers:</p>
             <table className="w-full text-sage-700">
               <tbody>
                 <tr className="border-b border-sage-200">
@@ -48,10 +48,10 @@ export default function BadevaerelserKokkenPage() {
                   </td>
                 </tr>
                 <tr className="border-b border-sage-200">
-                  <td className="py-2 pr-4 font-bold text-sage-900">Sikrer hygiejne og renlighed:</td>
+                  <td className="py-2 pr-4 font-bold text-sage-900">Garanterer hygiejne og renhed:</td>
                   <td className="py-2">
-                    Fugning lukker mellemrummene mellem fliser og gør det sværere for skidt og bakterier at samle sig. En korrekt udført fuge gør rengøringen lettere og skaber et sundere indeklima.
-                  </td>
+                    Sprækker og utætte fuger kan samle snavs og bakterier. En korrekt udført
+                    fuge gør rengøringen lettere og skaber et sundere indeklima. </td>
                 </tr>
                 <tr className="border-b border-sage-200">
                   <td className="py-2 pr-4 font-bold text-sage-900">Professionel finish:</td>
@@ -60,16 +60,10 @@ export default function BadevaerelserKokkenPage() {
                   </td>
                 </tr>
                 <tr className="border-b border-sage-200">
-                  <td className="py-2 pr-4 font-bold text-sage-900">Beskytter mod bevægelser:</td>
+                  <td className="py-2 pr-4 font-bold text-sage-900">Reducerer risikoen for revner:</td>
                   <td className="py-2">
-                    Fugemassen hjælper med at optage bevægelser i fliser og underlag, hvilket mindsker risikoen for sprækker og skader.
-                  </td>
-                </tr>
-                <tr>
-                  <td className="py-2 pr-4 font-bold text-sage-900">Øget sikkerhed:</td>
-                  <td className="py-2">
-                    I våde områder kan fuger skabe mere friktion, så risikoen for at glide reduceres.
-                  </td>
+                    Fliser og klinker kan med tiden bevæge sig. Fugemassen hjælper med at
+                    optage disse bevægelser og mindsker risikoen for sprækker.                  </td>
                 </tr>
               </tbody>
             </table>
@@ -79,9 +73,10 @@ export default function BadevaerelserKokkenPage() {
             <p className="text-lg text-sage-700">
               Vi fuger de vigtigste områder:
               <br />
-              <strong className="text-sage-900">Badeværelse:</strong> Omkring bruseniche, badekar, håndvask, toilet og gulvfliser.
+              <strong className="text-sage-900">Badeværelse:</strong> Omkring bruseniche, badekar, håndvask, toilet og fliser.
               <br />
-              <strong className="text-sage-900">Køkken:</strong> Langs bordplader, køkkenvask og vægfliser.
+              <strong className="text-sage-900">Køkken/Bryggers:</strong> Langs bordplader, skabe og mellem sokler, klinker og
+              fliser.
               <br />
               <strong className="text-sage-900">Flisearbejde:</strong> Komplette fladeløsninger i både vådrum og tørre områder.
               <br />

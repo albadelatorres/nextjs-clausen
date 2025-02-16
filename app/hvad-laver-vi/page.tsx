@@ -10,8 +10,9 @@ import Link from "next/link";
 const services = [
   "Døre/Vinduer",
   "Gulv/Loft",
-  "Badeværelser/Køkken",
+  "Badeværelser/Køkken/Bryggers",
   "Udskiftninger af gummifuger",
+  "Dilations/Sandbestrøgede fuger "
 ];
 
 // Simple slugify helper to convert service names into URL-friendly slugs.

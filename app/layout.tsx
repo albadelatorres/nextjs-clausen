@@ -126,6 +126,8 @@ export default function RootLayout({
             <p className="font-bold text-lg">Fugemester Clausen</p>
             <p>Daniel Segato Clausen</p>
             <p>Elkærholmparken 6B, 6040 Egtved, Denmark</p>
+            <a className="text-blue-700 hover:underline" href="mailto:fmc@fugemesterclausen.dk">fmc@fugemesterclausen.dk</a> <br/>
+            <a className="text-blue-700 hover:underline" href="tel:93980812">93 98 08 12</a>
             <p className="mt-2 text-sm">
               © {new Date().getFullYear()} Fugemester Clausen. All rights reserved.
             </p>

@@ -48,8 +48,7 @@ export default function BilledGalleri() {
             Billedgalleri
           </h1>
           <p className="text-lg text-sage-700 max-w-2xl mx-auto">
-            Se transformationen i vores arbejde gennem disse før- og efter-billeder.
-            <span className="block mt-2 text-sage-600 text-sm">
+            <span className="block mt-2 text-sage-700 text-sm">
               Klik på et billede for at se det i fuld størrelse.
             </span>
           </p>

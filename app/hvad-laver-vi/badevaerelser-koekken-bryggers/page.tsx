@@ -89,7 +89,11 @@ export default function BadevaerelserKokkenPage() {
           </p>
 
           <p className="text-sage-700 font-medium">
-            Hos Fugemester Clausen bruger vi kun kvalitetsfugemasse, der matcher behovene i både våde og tørre områder. Kontakt os i dag for en professionel og holdbar løsning!
+            Hos Fugemester Clausen bruger vi kun kvalitetsfugemasse, der matcher behovene i både våde og tørre områder.{" "}
+            <a href="/#kontakt" className="text-sage-800 underline hover:text-sage-900 transition-colors">
+              Kontakt os i dag
+            </a>{" "}
+            for en professionel og holdbar løsning!
           </p>
         </motion.div>
       </div>

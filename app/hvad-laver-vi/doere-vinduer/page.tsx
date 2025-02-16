@@ -72,7 +72,11 @@ export default function DoreVinduerPage() {
           </div>
 
           <p className="text-sage-700 font-medium">
-            Har du brug for hjælp? Kontakt os i dag for professionel fugning af dine døre og vinduer!
+            Har du brug for hjælp?{" "}
+            <a href="/#kontakt" className="text-sage-800 underline hover:text-sage-900 transition-colors">
+              Kontakt os i dag
+            </a>{" "}
+            for professionel fugning af dine døre og vinduer!
           </p>
         </motion.div>
       </div>

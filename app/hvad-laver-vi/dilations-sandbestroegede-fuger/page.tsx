@@ -73,7 +73,10 @@ export default function SandbestroogedeFugerDilationfugerPage() {
 
             </p>
             <p className="text-sage-700 font-medium">
-              Kontakt os i dag for en uforpligtende snak!
+              <a href="/#kontakt" className="text-sage-800 underline hover:text-sage-900 transition-colors">
+                Kontakt os i dag
+              </a>{" "}
+              for en uforpligtende snak!
             </p>
           </div>
         </motion.div>

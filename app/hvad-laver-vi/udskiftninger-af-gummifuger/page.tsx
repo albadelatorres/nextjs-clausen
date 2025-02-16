@@ -45,8 +45,11 @@ export default function UdskiftningAfGummifugerPage() {
             </ul>
           </div>
           <p className="text-lg text-sage-800">
-            Udskiftning af gummifuger er en vigtig vedligeholdelsesopgave, der beskytter mod fugtskader og forbedre udseendet af dit hjem. Ved at vælge de rette materialer og følge de korrekte trin kan du sikre en langtidsholdbar og flot finish.
-            Kontakt os i dag for en snak om, hvad vi kan gøre for dig!
+            Udskiftning af gummifuger er en vigtig vedligeholdelsesopgave, der beskytter mod fugtskader og forbedrer udseendet af dit hjem. Ved at vælge de rette materialer og følge de korrekte trin kan du sikre en langtidsholdbar og flot finish.{" "}
+            <a href="/#kontakt" className="text-sage-800 underline hover:text-sage-900 transition-colors">
+              Kontakt os i dag
+            </a>{" "}
+            for en snak om, hvad vi kan gøre for dig!
           </p>
         </motion.div>
       </div>

@@ -57,7 +57,11 @@ export default function GulvLoftPage() {
           </div>
 
           <p className="text-sage-700 font-medium">
-            Ønsker du professionel fugning af høj kvalitet? Kontakt os i dag, og lad os tage en snak om hvordan vi kan hjælpe dig!
+            Ønsker du professionel fugning af høj kvalitet?{" "}
+            <a href="/#kontakt" className="text-sage-800 underline hover:text-sage-900 transition-colors">
+              Kontakt os i dag
+            </a>
+            , og lad os tage en snak om hvordan vi kan hjælpe dig!
           </p>
         </motion.div>
       </div>

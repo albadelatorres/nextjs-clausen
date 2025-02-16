@@ -112,21 +112,19 @@ export default function HvadLaverVi() {
               <div className="inline-flex rounded-full border border-sage-300 overflow-hidden">
                 <button
                   onClick={() => setActiveWheel("fugemasse")}
-                  className={`px-4 py-2 text-sm font-medium transition-colors ${
-                    activeWheel === "fugemasse"
+                  className={`px-4 py-2 text-sm font-medium transition-colors ${activeWheel === "fugemasse"
                       ? "bg-sage-700 text-white"
                       : "bg-white text-sage-700"
-                  }`}
+                    }`}
                 >
                   Fugemasse
                 </button>
                 <button
                   onClick={() => setActiveWheel("vadrumssilicone")}
-                  className={`px-4 py-2 text-sm font-medium transition-colors ${
-                    activeWheel === "vadrumssilicone"
+                  className={`px-4 py-2 text-sm font-medium transition-colors ${activeWheel === "vadrumssilicone"
                       ? "bg-sage-700 text-white"
                       : "bg-white text-sage-700"
-                  }`}
+                    }`}
                 >
                   Vådrumssilicone
                 </button>
@@ -146,7 +144,11 @@ export default function HvadLaverVi() {
             </div>
 
             <p className="text-sage-600">
-              Fandt du ikke hvad du ledte efter? Kontakt os alligevel, så tager vi en snak om, hvordan vi kan hjælpe dig.
+              Fandt du ikke hvad du ledte efter?{" "}
+              <a href="/#kontakt" className="text-sage-800 underline hover:text-sage-900 transition-colors">
+                Kontakt
+              </a>{" "}
+              os alligevel, så tager vi en snak om, hvordan vi kan hjælpe dig.
             </p>
           </div>
         </motion.div>

@@ -161,6 +161,53 @@ export default function BilledGalleri() {
           </div>
         </div>
       </div>
+      <motion.section 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+        className="container mx-auto px-4 py-16"
+      >
+        <div className="text-center space-y-4 mb-12">
+          <span className="inline-block px-4 py-1 rounded-full bg-sage-100 text-sage-700 text-sm font-medium">
+            Se mere
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-bold text-sage-900">Andre Projekter</h2>
+          <p className="text-lg text-sage-700 max-w-2xl mx-auto">
+            Udforsk flere af vores gennemførte projekter
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          {["image1", "image2", "image3", "image4"].map((img, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 * (index + 1) }}
+              className="glass-panel rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 group"
+            >
+              <div
+                className="relative aspect-[4/3] cursor-pointer"
+                onClick={() => setSelectedImage({ src: `/images/${img}.jpeg`, alt: `Projekt ${index + 1}` })}
+              >
+                <Image
+                  src={`/images/${img}.jpeg`}
+                  alt={`Projekt ${index + 1}`}
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                />
+                <div className="absolute inset-0 bg-sage-900/0 group-hover:bg-sage-900/20 transition-colors duration-300" />
+              </div>
+              <div className="p-4">
+                <h3 className="text-sage-900 font-semibold">Projekt {index + 1}</h3>
+                <p className="text-sage-600 text-sm mt-1">Klik for at se flere detaljer</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.section>
+
 
       {/* Fullscreen Image Dialog */}
       <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>

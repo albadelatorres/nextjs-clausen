@@ -2,6 +2,18 @@ import sgMail, { MailDataRequired } from "@sendgrid/mail";
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY as string);
 
+// Manejo de preflight (OPTIONS)
+export async function OPTIONS() {
+  return new Response(null, {
+    status: 204,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "POST, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type"
+    }
+  });
+}
+
 export async function POST(request: Request) {
   try {
     const { navn, email, telefon, postnummer, besked } = await request.json();
@@ -38,18 +50,24 @@ Daniel`,
                <li><strong>Postnummer:</strong> ${postnummer}</li>
                <li><strong>Besked:</strong> ${besked}</li>
              </ul>
-             <p>Med venlig hilsen,<br/>Daniel</p>`,
+             <p>Med venlig hilsen,<br/>Daniel</p>`
     };
 
     await sgMail.send(msg);
 
     return new Response(JSON.stringify({ message: "Emails sent successfully" }), {
       status: 200,
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+      },
     });
   } catch (error) {
     console.error("SendGrid error:", error);
     return new Response(JSON.stringify({ error: "Error sending email" }), {
       status: 500,
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+      },
     });
   }
 }

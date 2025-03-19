@@ -43,14 +43,12 @@ Daniel`,
 
       // personalizations array for multiple recipients
       personalizations: [
-        // 1) Send to the client
         {
-          to: email,
-        },
-        // 2) Send to yourself
-        {
-          to: process.env.SENDGRID_FROM_EMAIL as string,
-        },
+          to: [
+            { email: email },
+            { email: process.env.SENDGRID_FROM_EMAIL as string }
+          ]
+        }
       ],
     };
 

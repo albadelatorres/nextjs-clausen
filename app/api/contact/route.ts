@@ -10,6 +10,7 @@ export async function POST(request: Request) {
 
     // Create a single message with 2 personalizations
     const msg = {
+      to: [email, process.env.SENDGRID_FROM_EMAIL as string],
       // The verified sender
       from: process.env.SENDGRID_FROM_EMAIL as string,
 
@@ -17,17 +18,17 @@ export async function POST(request: Request) {
       subject: "Vi har modtaget din besked",
       text: `Hej ${navn},
 
-Vi har modtaget din besked og vil kontakte dig snarest. Tak for din interesse i Fugemester Clausen!
+        Vi har modtaget din besked og vil kontakte dig snarest. Tak for din interesse i Fugemester Clausen!
 
-Her er en kopi af de oplysninger, du har indsendt:
-Navn: ${navn}
-Email: ${email}
-Telefon: ${telefon}
-Postnummer: ${postnummer}
-Besked: ${besked}
+        Her er en kopi af de oplysninger, du har indsendt:
+        Navn: ${navn}
+        Email: ${email}
+        Telefon: ${telefon}
+        Postnummer: ${postnummer}
+        Besked: ${besked}
 
-Med venlig hilsen,
-Daniel`,
+        Med venlig hilsen,
+        Daniel`,
 
       html: `<p>Hej ${navn},</p>
              <p>Vi har modtaget din besked og vil kontakte dig snarest. Tak for din interesse i <strong>Fugemester Clausen</strong>!</p>
@@ -40,20 +41,10 @@ Daniel`,
                <li><strong>Besked:</strong> ${besked}</li>
              </ul>
              <p>Med venlig hilsen,<br/>Daniel</p>`,
-
-      // personalizations array for multiple recipients
-      personalizations: [
-        {
-          to: [
-            { email: email },
-            { email: process.env.SENDGRID_FROM_EMAIL as string }
-          ]
-        }
-      ],
     };
 
     // Send both emails in one go
-    await sgMail.send(msg);
+    await sgMail.sendMultiple(msg);
 
     return new Response(JSON.stringify({ message: "Emails sent successfully" }), {
       status: 200,

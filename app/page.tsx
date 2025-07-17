@@ -149,29 +149,32 @@ export default function Home() {
 
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center">
-          <div className="absolute inset-0 bg-gradient-to-b from-sage-900/70 to-sage-800/70">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="container mx-auto px-4 h-full flex items-center justify-center"
-            >
-              <div className="text-center max-w-3xl">
-                <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  Velkommen til Fugemester Clausen
-                </h1>
-                <p className="text-xl text-white/90 mb-8">
-                  Få professionel fugning til konkurrencedygtige priser – vi beskytter dit hjem med effektive løsninger og præcision.
-                </p>
-                <Link
-                  href="/#kontakt"
-                  className="inline-block px-8 py-3 bg-sage-600 text-white rounded-lg hover:bg-sage-700 transition-colors duration-200"
-                >
-                  Få et uforpligtende tilbud
-                </Link>
-              </div>
-            </motion.div>
-          </div>
+          <img
+            src="/images/homephoto.jpg"
+            alt="Background"
+            className="absolute inset-0 w-full h-full object-cover filter opacity-85"
+          />
+          <motion.div
+            className="relative z-20 container mx-auto px-4 h-full flex items-center justify-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="relative z-30 text-center max-w-3xl bg-gradient-to-b from-sage-900/60 to-sage-800/50 backdrop-blur-sm rounded-xl px-8 py-8">
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Velkommen til Fugemester Clausen
+              </h1>
+              <p className="text-xl text-white/90 mb-8">
+                Få professionel fugning til konkurrencedygtige priser – vi beskytter dit hjem med effektive løsninger og præcision.
+              </p>
+              <Link
+                href="/#kontakt"
+                className="inline-block px-8 py-3 bg-sage-600 text-white rounded-lg hover:bg-sage-700 transition-colors duration-200"
+              >
+                Få et uforpligtende tilbud
+              </Link>
+            </div>
+          </motion.div>
         </section>
 
         {/* Service Cards */}

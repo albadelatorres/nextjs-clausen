@@ -150,7 +150,7 @@ export default function Home() {
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center">
           <img
-            src="/images/homephoto.jpg"
+            src="/images/paint4.jpg"
             alt="Background"
             className="absolute inset-0 w-full h-full object-cover filter opacity-85"
           />

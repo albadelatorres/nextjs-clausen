@@ -52,7 +52,7 @@ export default function HvadLaverVi() {
         >
           <div className="text-center space-y-4">
             <span className="inline-block px-4 py-1 rounded-full bg-sage-100 text-sage-700 text-sm font-medium animate-fade-in">
-              Professionelt Fugearbejde
+              Professionel Fugemand
             </span>
             <h1 className="text-4xl sm:text-5xl font-bold text-sage-900 tracking-tight">
               Hvad laver vi?
